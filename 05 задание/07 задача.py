@@ -21,5 +21,5 @@ for n in range(1, 100000):
         if R>r_max:
             r_max = R
             n_max = n
-        print(f'n={n},n_12={n_12} R = {R}')
+        #print(f'n={n},n_12={n_12} R = {R}')
 print(f'n={n_max}, R = {r_max}')
