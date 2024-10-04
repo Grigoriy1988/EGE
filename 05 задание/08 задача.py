@@ -6,7 +6,7 @@ def перевод(a, new):
         a = a // new
     return dig_s
 r_max = 0
-for n in range(10000, 100000):
+for n in range(100000, 1000000):
     n_19 = перевод(n, 19)
     # print(f"n={n} n_19={n_19}")
     # согласные буквы (В, C, D, F, G, H) заменяются на 5;
