@@ -1,22 +1,29 @@
-def перевод(a):
-    n_80 = []
-    while a > 0:
-        n_80.append(a % 80)
-        a //= 80
-    n_80.reverse()
-    s_even = sum(i for i in n_80 if i%2==0)
-    s_odd = sum(i for i in n_80 if i % 2 != 0)
-    dig = s_even % 80 if s_even >s_odd else s_odd % 80
-    n_80.append(dig)
-    return дес(n_80)
+цифры = '0123456789ABCDEFGI***'
+def перевод(число, новое_основание):
+    новое_число = ''
+    while число >0:
+        новое_число =цифры[число %  новое_основание] +новое_число
+        число = число // новое_основание
+    return  новое_число
 
-def дес(a):
-    b = 0
-    des = 0
-    for i in a:
-        des += i*80**b
-        b+=1
-    return  des
+r_max = 0
+n_max = 144
+for n in range(144 ,1726 +1):
+    R = перевод(n,12)
+    # print(f'n= {n}, R= {R}')
+    if n % 12 == 0:
+        R = R + R[-3:]
+    else:
+        R = перевод(n%12*3,12) + R
+    # print(f'n= {n}, R= {R}')
+    R = int(R,12)
+    if R < 58000:
+        if r_max<R:
+            r_max =R
+            n_max =n
+        # print(f'n= {n}, R= {R}')
+print(n_max)
+
 
 
 
