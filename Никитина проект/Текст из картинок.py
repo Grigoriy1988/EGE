@@ -17,7 +17,7 @@ for i, j in itertools.product(range(x), range(y)):
     G = g_2 - g if g_2 - g>= 0 else 255 + g_2 - g
     B = b_2 - b if b_2 - b >= 0 else 255 + b_2 - b
     # f_output.write(str(R)+str(G)+str(B) + '\n')
-    code = int(('0'* (4-len(bin(R)[2:]))+bin(R)[2:] +'0'*(4-len(bin(G)[2:]))+ bin(G)[2:] + '0'*(4-len(bin(B)[2:]))+bin(B)[2:]),2)
+    code = int(('0'* (5-len(bin(R)[2:]))+bin(R)[2:] +'0'*(5-len(bin(G)[2:]))+ bin(G)[2:] + '0'*(5-len(bin(B)[2:]))+bin(B)[2:]),2)
     # print(code)
     if code == 0:
         break
