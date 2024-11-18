@@ -1,5 +1,5 @@
+#3230
 min_k = []
-
 for k in range(81,100):
     s = '1'*k
 
