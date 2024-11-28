@@ -12,7 +12,8 @@ Ox  = [i  for i in range(1022,3899)]
 dx = [] # длинны отрезка а
 for a1,a2 in combinations(Ox,2):
     if all(f(x) == 1 for x in Ox):
-        print(a2-a1)
+        # print(a2-a1)
         dx.append(a2 - a1)
-print('\n'.join(str(i) for i in dx))
+print(min(dx))
+# print('\n'.join(str(i) for i in dx))
 
