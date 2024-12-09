@@ -9,6 +9,7 @@ def F(n):
     if n % 3 == 0:
         return (n//3)*F(n//3) + n - 12
     return F(n-1) + n*n + 5
+
 count = 0
 for i in range(1,801):
     if all( int(j) % 2 == 0 for j in str(F(i))):
