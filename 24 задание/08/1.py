@@ -1,0 +1,5 @@
+s= open('24_4602.txt').readline()
+s = s.replace("O","A").replace('C',"B").replace('D','B')
+s =s.replace('BA','*')
+s = s.replace('B',' ').replace('A', ' ')
+print(max(len(i) for i in s.split()))
