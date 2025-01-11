@@ -12,5 +12,11 @@ while True:
                 break
     else:
         break
-print(academic_discipline)
+
+if academic_discipline.get('Математика', None):
+    print(
+        "\n".join(f'{academic_discipline['Математика'].index(i) + 1}) {i}' for i in academic_discipline['Математика']))
+else:
+    print("Математику не изучает ни один студент")
+
 

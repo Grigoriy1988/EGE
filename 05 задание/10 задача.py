@@ -1,6 +1,3 @@
-from asyncio import set_event_loop
-
-
 def Шубинкин(a):
     n_80 = []
     while a > 0:
