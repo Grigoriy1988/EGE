@@ -25,3 +25,21 @@ centerA = [center(cl) for cl in clusterA]
 Px = sum(x  for x,y in centerA)/2
 Py = sum(y  for x,y in centerA)/2
 print(int(Px*10_000),int(Py*10_000))
+
+clusterB = [[], [],[]]
+for s in open('27B.txt'):
+    x,y = [float(c) for c in s.split()]
+    if y > 0.5 and x < 8.5:
+        clusterB[0].append([x,y])
+    elif 4*y > -3*x + 28 :
+        clusterB[1].append([x,y])
+    else:
+        clusterB[2].append([x, y])
+print(clusterB[0][:10])
+print(clusterB[1][:10])
+print(clusterB[2][:10])
+centerB = [center(cl) for cl in clusterB]
+
+Px = sum(x  for x,y in centerB)/3
+Py = sum(y  for x,y in centerB)/3
+print(int(Px*10_000),int(Py*10_000))
