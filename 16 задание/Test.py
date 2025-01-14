@@ -1,18 +1,13 @@
-'''
-F(n) = 1, при n = 1;F(n) = (n - 1)·F(n - 1) при n > 1.
-Чему равно значение выражения (F(2024) + 2·F(2023)) / F(2022)?
+def f(n):
+    if n <=5:
+        return n
+    elif n % 8 == 0:
+        return n + f(n//2 -3)
+    return  n + f(n + 4)
+for i  in range(10000):
+    try:
+        print(i, f(i))
+    except:
+        pass
 
-'''
-# from sys import*
-# setrecursionlimit(2025)
-#
-# def F(n):
-#     if n == 1:
-#         return 1
-#     return (n - 1) * F(n - 1)
-#
-#
-# print((F(2024) + 2 * F(2023)) / F(2022))
-#
-n = 1562686
-print(str(n).count('6'))
+        #print("Ошибка ", i)
