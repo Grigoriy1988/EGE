@@ -11,11 +11,11 @@ def center(cluster):
         sum_dist.append([sm, p])
     return min(sum_dist)[1]
 
-
+# Заполняем кластер
 clusterA = [[], []]
 for s in open('27A.txt'):
     x, y = [float(c) for c in s.split()]
-    if x < 1.2:
+    if y > 8:
         clusterA[0].append([x, y])
     else:
         clusterA[1].append([x, y])
@@ -26,22 +26,22 @@ for s in open('27A.txt'):
 
 centerA = [center(cl) for cl in clusterA]
 #print(centerA)
-Px = sum((x)  for x,y in centerA)/2
-Py = sum((y)  for x,y in centerA)/2
+Px = sum(abs(x)  for x,y in centerA)/2
+Py = sum(abs(y)  for x,y in centerA)/2
 print(int(Px*10_000),int(Py*10_000))
-
-clusterB = [[], [],[]]
-for s in open('27B.txt'):
-    x, y = [float(c) for c in s.split()]
-    if y < 4:
-        clusterB[0].append([x, y])
-    elif x >5:
-        clusterB[1].append([x, y])
-    else:
-        clusterB[2].append([x,y])
-
-centerB = [center(cl) for cl in clusterB]
-#print(centerA)
-Px = sum(abs(x)  for x,y in centerB)/3
-Py = sum(abs(y) for x,y in centerB)/3
-print(int(Px*10_000),int(Py*10_000))
+#
+# clusterB = [[], [],[]]
+# for s in open('27B.txt'):
+#     x, y = [float(c) for c in s.split()]
+#     if y < 4:
+#         clusterB[0].append([x, y])
+#     elif x >5:
+#         clusterB[1].append([x, y])
+#     else:
+#         clusterB[2].append([x,y])
+#
+# centerB = [center(cl) for cl in clusterB]
+# #print(centerA)
+# Px = sum(abs(x)  for x,y in centerB)/3
+# Py = sum(abs(y) for x,y in centerB)/3
+# print(int(Px*10_000),int(Py*10_000))

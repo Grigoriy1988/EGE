@@ -1,5 +1,4 @@
 answer = set()
-
 def f(c,step=0):
     if step==15:
         answer.add(c)
