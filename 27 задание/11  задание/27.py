@@ -15,9 +15,9 @@ def center(cluster):
 clusterA = [[], []]
 for s in open("27A.txt"):
     x, y = [float(c) for c in s.split()]
-    if (0 < x < 2 and -1 < y < 1) or (10 < x < 12 and 0 < y < 2):
+    if (1 < x < 3 and 2 < y < 3) or (7 < x < 8 and -2 < y <-1):
         continue
-    elif -1 < x < 3 and 2 < y < 9 or x < 7 and 2 < y < 5:
+    elif  x < 5.5 and y >= 0 or x < 3.5:
         clusterA[0].append([x, y])
     else:
         clusterA[1].append([x, y])
@@ -31,11 +31,11 @@ print(int(Px * 100000), int(Py * 100000))
 clusterB = [[], [], []]
 for s in open('27B.txt'):
     x, y = [float(c) for c in s.split()]
-    if -1 < x < 1 and 9 < y < 11 or 7 < x < 9 and  -3 < y < -1 or 10 < x < 12 and 1 < y < 3:
+    if 2.5 < x < 3.5 and 8.5 < y < 9.5 or 10 < x < 11 and  9.5 < y < 10.5 or 9.5 < x < 10.5 and -3.5 < y < -2.5:
         pass
-    elif  y > 5.25:
+    elif  4.5 < x < 8 and 2<y<7:
         clusterB[0].append([x, y])
-    elif 2 < x < 10 and 2 <= y <= 5.25 or x > 7:
+    elif 1 < x < 8 and -2 <= y <= 6:
         clusterB[1].append([x, y])
     else:
         clusterB[2].append([x, y])
