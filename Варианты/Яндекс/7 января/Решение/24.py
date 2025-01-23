@@ -1,0 +1,7 @@
+s = open('24.txt').readline()
+s = s.replace("BAB","*").replace('ABA',"*")
+# print(s)
+s = s.replace('C'," ").replace("A"," ").replace("B",' ')
+s = s.split()
+print(s)
+print(max(len(i) for i in s))
