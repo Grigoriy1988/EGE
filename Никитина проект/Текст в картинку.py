@@ -25,3 +25,4 @@ for i, j in itertools.product(range(x), range(y)):
     pixels[i, j] = r, g, b
 im_input.save('output.png')
 f_input.close()
+print('Все')
