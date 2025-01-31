@@ -15,6 +15,7 @@ def r(x):
     return abs(N - int(s, 3))
 
 
+
 for n in range(332360, 10000000):
     if r(n) == 1864246:
         print(n)
