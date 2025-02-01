@@ -8,12 +8,3 @@ while a > 0:
 
 print(len(a15), a15[::-1])  # максимальное количество разрядов и само число
 print(4 * 14 * 13 * 12 * 11 * 10 * 9 * 8) # ответ
-
-
-res = set()
-        continue
-    else:
-        dig = int(''.join(j for j in i), 15)
-        if dig <= 855_000_000:
-            res.add(dig)
-print(len(res))
