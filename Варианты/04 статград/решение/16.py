@@ -11,5 +11,6 @@ def f(n):
 for i in range(0, 1000000000):
     if f(i) == 27 and f(i + 1) == 16:
         print(i)
+        break
 
 
