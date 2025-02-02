@@ -1,5 +1,4 @@
 dig ='0123456789abcdefghijk'
-# print(len(dig))
 for p in range(9,22):
     for x in dig[:p]:
         for y in dig[:p]:
