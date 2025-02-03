@@ -29,10 +29,10 @@ for s in open('27A.txt'):
         clusterA[1].append([x, y])
     else:
         clusterA[2].append([x, y])
-print(len(clusterA[0]), len(clusterA[1]), len(clusterA[2]))
+# print(len(clusterA[0]), len(clusterA[1]), len(clusterA[2]))
 clusterA.pop(1)
 centerA = [center(cl) for cl in clusterA]
-print(centerA[0])
+# print(centerA[0])
 Ra = (radius(centerA[0], clusterA[0]), radius(centerA[1], clusterA[1]))
 print(int(sum(Ra) / len(Ra) * 10_000))
 
@@ -52,8 +52,12 @@ for s in open('27B.txt'):
         clusterB[4].append([x, y])
 print(len(clusterB[0]), len(clusterB[1]), len(clusterB[2]),len(clusterB[3]),len(clusterB[4]))
 clusterB.pop(4)
-centerB = [center(cl) for cl in clusterA]
+centerB = [center(cl) for cl in clusterB]
 print(centerB[0])
-Rb = (radius(i,j) for i in clusterB for j in clusterB)
-print(*Rb)
-# print(int(sum(Ra) / len(Ra) * 10_000))
+Rb=[]
+for i in range(len(clusterB)):
+    Rb.append(radius(centerB[i],clusterB[i]))
+print(Rb)
+# Rb = (radius(i,j) for i in clusterB for j in clusterB)
+# print(*Rb)
+print(int(sum(Rb) / len(Rb) * 10_000))
