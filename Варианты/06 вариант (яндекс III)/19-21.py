@@ -3,7 +3,7 @@ def game(s,step):
         return step % 2 == 0
     if step == 0:
         return  0
-    h = [game(s - 2, step - 1), game(s -4, step - 1),game(s // 2,step-1)]
+    h = [game(s - 2, step - 1), game(s -4, step - 1),game((s + 1) // 2,step-1)]
     return any(h) if (step - 1) % 2 ==0 else all(h)
 
 
