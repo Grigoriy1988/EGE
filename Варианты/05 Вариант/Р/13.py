@@ -5,5 +5,6 @@ count = 0
 net = ip_network(f'{ip_узла}/{mask}',0)
 for ip in net:
     if f"{ip:b}".count('1') % 5 !=0:
+        print(ip)
         count+=1
 print(count)

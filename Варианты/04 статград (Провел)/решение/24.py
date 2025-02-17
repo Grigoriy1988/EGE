@@ -3,7 +3,9 @@ for a in '*+-':
     for b in '*+-':
         f = f.replace(a+b,' ')
 f = f.replace('B',' ').replace('C',' ').replace('D',' ').replace('*',' ').replace("A"," A").split()
-f = [i for i in f if 'A' in i and len(i)>1 and i[1] not in '+-*']
+# print(f)
+f = [i for i in f if 'A' in i and len(i)>1 and i[1] not in '+-']
+# print(f)
 max_sum = (0,0)
 for i in f:
     try:

@@ -16,7 +16,7 @@ def r(x):
 
 
 
-for n in range(332360, 10000000):
+for n in range(3323600, 10000000):
     if r(n) == 1864246:
         print(n)
         break

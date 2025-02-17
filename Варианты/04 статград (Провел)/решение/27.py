@@ -11,7 +11,7 @@ def center(cluster):
         sum_dist.append([sm, p])
     return min(sum_dist)[1]
 
-
+# находим радиус
 def radius(p, cluster):
     r = []
     for i in cluster:
@@ -50,14 +50,14 @@ for s in open('27B.txt'):
         clusterB[3].append([x, y])
     else:
         clusterB[4].append([x, y])
-print(len(clusterB[0]), len(clusterB[1]), len(clusterB[2]),len(clusterB[3]),len(clusterB[4]))
+#print(len(clusterB[0]), len(clusterB[1]), len(clusterB[2]),len(clusterB[3]),len(clusterB[4]))
 clusterB.pop(4)
 centerB = [center(cl) for cl in clusterB]
-print(centerB[0])
+#print(centerB[0])
 Rb=[]
 for i in range(len(clusterB)):
     Rb.append(radius(centerB[i],clusterB[i]))
-print(Rb)
+#print(Rb)
 # Rb = (radius(i,j) for i in clusterB for j in clusterB)
 # print(*Rb)
 print(int(sum(Rb) / len(Rb) * 10_000))

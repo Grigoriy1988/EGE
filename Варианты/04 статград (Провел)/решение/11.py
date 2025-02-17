@@ -1,5 +1,4 @@
 from math import *
-
 k = 21
 N = 26 + 26
 i = ceil(log2(N))
