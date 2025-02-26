@@ -8,7 +8,7 @@ def center(cluster):
     sum_dist = []
     for p in cluster:
         sm = sum(distance(p, p1) for p1 in cluster)
-        sum_dist.append([sm, p])
+        sum_dist.append([sm, p]) # коментарий
     return min(sum_dist)[1]
 
 # Заполняем кластер
