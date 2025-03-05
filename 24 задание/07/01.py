@@ -1,5 +1,0 @@
-s = open('24_4627.txt').readline()
-s = s.replace('NPO',"*").replace("PNO","*")
-s = s.replace('O',"N").replace("P","N")
-s = s.split('N')
-print(max(len(i) for i in s))
