@@ -1,4 +1,9 @@
+import datetime
 from random import shuffle
+
+from datetime import *
+d = datetime.now().strftime('%d-%m-%Y')
+print(d)
 
 name = ['Авдеенко Михаил', 'Бурлянов Даниил', 'Гаврилов Артем', 'Кичко Анастасия', 'Коханец Владимир', "Морщинин Алан",
         "Пятков Артём", "Турецкий Андрей", "Цыганова Варвара", "Эльчапаров Артем"]
