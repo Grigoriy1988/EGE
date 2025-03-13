@@ -16,7 +16,7 @@ for i in name:
     shuffle(задание3)
     s = задание1[:3] + задание2[:3] + задание3[:3]
     print(i, ', '.join(str(n) for n in s))
-    f.write(i + ', '.join(str(n) for n in s) + '\n')
+    f.write(i +':   '+ ', '.join(str(n) for n in s) + '\n')
 
 f.close()
 
