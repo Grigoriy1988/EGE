@@ -5,6 +5,7 @@ def f(c,e,p13=False,p17=False):
         p17 = True
     if c > e:
         return 0
+
     if c < e :
         return f(c+2,e,p13,p17)+f(c+3,e,p13,p17)+f(c+5,e,p13,p17)
     if c == e and ((p13 == True and p17 == False) or (p17 == True and p13 == False)):
